@@ -1,0 +1,727 @@
+{
+ "BOLATU:claude-fable-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.53
+ },
+ "BOLATU:claude-fable-5-1": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.77
+ },
+ "BOLATU:claude-haiku-4-5-20251001": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 5.6
+ },
+ "BOLATU:claude-haiku-5-5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.42
+ },
+ "BOLATU:claude-opus-4-7": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.62
+ },
+ "BOLATU:claude-opus-4.8": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.72
+ },
+ "BOLATU:claude-opus-5-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 2.1
+ },
+ "BOLATU:claude-sonnet-4-20250514": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.41
+ },
+ "BOLATU:claude-sonnet-4-6": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.38
+ },
+ "BOLATU:claude-sonnet-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.52
+ },
+ "BOLATU:claude-sonnet-5-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.5
+ },
+ "BOLATU:gemini-2.0-flash": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.36
+ },
+ "BOLATU:gemini-2.5-flash-preview-04-17": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.62
+ },
+ "BOLATU:gemini-2.5-pro-preview-03-25": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.56
+ },
+ "BOLATU:gemini-3-flash-preview": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.87
+ },
+ "BOLATU:gemini-3-pro-preview": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.9
+ },
+ "BOLATU:gemini-3.1-flash-lite-preview": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.11
+ },
+ "BOLATU:gemini-3.1-pro-preview": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.4
+ },
+ "BOLATU:gemini-3.5-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.79
+ },
+ "BOLATU:gemini-3.5-flash-lite": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.3
+ },
+ "BOLATU:gemini-3.6-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.65
+ },
+ "BOLATU:gemini-3.7-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.63
+ },
+ "BOLATU:gemini-3.8-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.65
+ },
+ "BOLATU:gemini-4-argon": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.45
+ },
+ "BOLATU:gpt-4.1": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 5.11
+ },
+ "BOLATU:gpt-4o-all": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.64
+ },
+ "BOLATU:gpt-5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.6
+ },
+ "BOLATU:gpt-5-mini": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.25
+ },
+ "BOLATU:gpt-5-nano": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.44
+ },
+ "BOLATU:gpt-5.1": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.77
+ },
+ "BOLATU:gpt-5.2": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.08
+ },
+ "BOLATU:gpt-5.4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.78
+ },
+ "BOLATU:gpt-5.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.63
+ },
+ "BOLATU:gpt-5.6-luna": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.57
+ },
+ "BOLATU:gpt-5.6-sol": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.78
+ },
+ "BOLATU:gpt-6-astra": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.75
+ },
+ "BOLATU:gpt-6-luna": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.86
+ },
+ "BOLATU:gpt-6-sol": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.5
+ },
+ "BOLATU:gpt-6.1-sol": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.54
+ },
+ "BOLATU:gpt-6.1-terra": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.57
+ },
+ "BOLATU:grok-3": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.09
+ },
+ "BOLATU:grok-3-copy": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.43
+ },
+ "BOLATU:grok-3-copy2": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 7.43
+ },
+ "BOLATU:grok-3-deepsearch": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.94
+ },
+ "BOLATU:grok-3-deepsearch-copy": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.75
+ },
+ "BOLATU:grok-3-deepsearch-copy2": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.66
+ },
+ "BOLATU:grok-3-reasoner": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 8.94
+ },
+ "BOLATU:grok-3-reasoner-copy": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 5.16
+ },
+ "BOLATU:grok-4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.67
+ },
+ "BOLATU:grok-4-1-fast-non-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 6.92
+ },
+ "BOLATU:grok-4-1-fast-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 13.5
+ },
+ "BOLATU:grok-4-fast-non-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 8.44
+ },
+ "BOLATU:grok-4-fast-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 6.27
+ },
+ "BOLATU:grok-4.1": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 5.4
+ },
+ "BOLATU:grok-4.20-beta-non-reasoning": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.46
+ },
+ "BOLATU:grok-4.20-beta-non-reasoning-copy": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.35
+ },
+ "BOLATU:grok-4.20-beta-reasoning": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.49
+ },
+ "BOLATU:grok-4.20-beta-reasoning-copy": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.47
+ },
+ "BOLATU:grok-4.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.33
+ },
+ "BOLATU:grok-4.6": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.7
+ },
+ "BOLATU:grok-4.7": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.47
+ },
+ "CLAUDE:v4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.3
+ },
+ "DEEPSEEK:R1": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.52
+ },
+ "DEEPSEEK:doubao-seed-1-8": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.5
+ },
+ "DEEPSEEK:v3": {
+  "kind": "FREE",
+  "sample": "successOKsuccess",
+  "latency": 2.45
+ },
+ "DEEPSEEK:v3-0324": {
+  "kind": "FREE",
+  "sample": "successOKsuccess",
+  "latency": 2.32
+ },
+ "DEEPSEEK:v3-1-250821": {
+  "kind": "FREE",
+  "sample": "> Got it, the user wants me to reply exactly with OK. That's straightf",
+  "latency": 9.59
+ },
+ "DEEPSEEK:v3.2-no-thinking": {
+  "kind": "FREE",
+  "sample": ">We need to reply exactly with \"OK\". The user said \"Reply with exactly",
+  "latency": 3.12
+ },
+ "DEEPSEEK:v3.2-no-thinking-online": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 2.39
+ },
+ "DEEPSEEK:v3.2-thinking": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.72
+ },
+ "DEEPSEEK_OFFICIAL:deepseek-v4-flash": {
+  "kind": "FREE",
+  "sample": "successOKsuccess",
+  "latency": 2.23
+ },
+ "DEEPSEEK_OFFICIAL:deepseek-v4-pro": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.5
+ },
+ "GEMINI:gemini-3-flash-preview": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.47
+ },
+ "GEMINI:gemini-3.1-flash-lite-preview": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.37
+ },
+ "GEMINI:gemini-3.1-pro-preview": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.55
+ },
+ "GEMINI:gemini-3.5-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.58
+ },
+ "GEMINI:gemini-3.5-flash-lite": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.05
+ },
+ "GEMINI:gemini-3.6-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.65
+ },
+ "GEMINI:gemini-3.7-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.56
+ },
+ "GEMINI:gemini-3.8-flash": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 2.2
+ },
+ "GEMINI:gemini-4-argon": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.76
+ },
+ "GEMINI:v1.0-pro": {
+  "kind": "OFFLINE",
+  "sample": "The current model is offline. Please switch to a different model.",
+  "latency": 1.88
+ },
+ "GEMINI:v1.5-flash": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.35
+ },
+ "GEMINI:v1.5-pro": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.47
+ },
+ "GEMINI:v2.0-flash": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.72
+ },
+ "GEMINI:v2.5-flash": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.72
+ },
+ "GEMINI:v2.5-pro": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.82
+ },
+ "GEMINI:v3.0-pro": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.62
+ },
+ "GEMINI:v3.5": {
+  "kind": "OFFLINE",
+  "sample": "The current model is offline. Please switch to a different model.",
+  "latency": 1.72
+ },
+ "GEMINI:v3.5-16": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.64
+ },
+ "GEMINI:v4": {
+  "kind": "OFFLINE",
+  "sample": "The current model is offline. Please switch to a different model.",
+  "latency": 1.57
+ },
+ "GPT:4.1-mini": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.6
+ },
+ "GPT:4o": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.34
+ },
+ "GPT:4o-mini": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.84
+ },
+ "GPT:gpt-5-nano": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.17
+ },
+ "GPT:gpt-5.1": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.32
+ },
+ "GPT:gpt-5.2": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.77
+ },
+ "GPT:gpt-5.4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.33
+ },
+ "GPT:gpt-5.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.76
+ },
+ "GPT:gpt-5.6-luna": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.15
+ },
+ "GPT:gpt-5.6-sol": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.59
+ },
+ "GPT:gpt-6-astra": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.77
+ },
+ "GPT:gpt-6-luna": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.77
+ },
+ "GPT:gpt-6-sol": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.84
+ },
+ "GPT:gpt-6.1-sol": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.52
+ },
+ "GPT:gpt-6.1-terra": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.74
+ },
+ "GPT:o1-mini": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.75
+ },
+ "GPT:v3.5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.53
+ },
+ "GPT:v3.5-16": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 1.64
+ },
+ "GPT:v4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.56
+ },
+ "GPT:v4.0": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 2.05
+ },
+ "GPT:v5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.59
+ },
+ "GPT:v5-mini": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.85
+ },
+ "OPEN_ROUTER:anthropic/claude-fable-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.74
+ },
+ "OPEN_ROUTER:anthropic/claude-fable-5.1": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.75
+ },
+ "OPEN_ROUTER:anthropic/claude-haiku-4.5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.23
+ },
+ "OPEN_ROUTER:anthropic/claude-haiku-5.5": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.4
+ },
+ "OPEN_ROUTER:anthropic/claude-opus-4.8": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.62
+ },
+ "OPEN_ROUTER:anthropic/claude-opus-5.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.34
+ },
+ "OPEN_ROUTER:anthropic/claude-sonnet-5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.53
+ },
+ "OPEN_ROUTER:anthropic/claude-sonnet-5.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.76
+ },
+ "OPEN_ROUTER:claude-opus-4.6": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.33
+ },
+ "OPEN_ROUTER:claude-opus-4.7": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.6
+ },
+ "OPEN_ROUTER:claude-sonnet-4.6": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.54
+ },
+ "OPEN_ROUTER:google/gemma-4-31b-it": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 1.95
+ },
+ "OPEN_ROUTER:mistral-small-3.2-24b-instruct": {
+  "kind": "OFFLINE",
+  "sample": "The current model is offline. Please switch to a different model.",
+  "latency": 1.83
+ },
+ "OPEN_ROUTER:mistral-small-creative": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.4
+ },
+ "OPEN_ROUTER:mistralai/mistral-nemo": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.65
+ },
+ "OPEN_ROUTER:nvidia/nemotron-3-ultra-550b-a55b": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.53
+ },
+ "OPEN_ROUTER:step-3.5-flash": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.41
+ },
+ "OPEN_ROUTER:step-3.5-flash-free": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.87
+ },
+ "XAI:grok-2-vision": {
+  "kind": "EMPTY",
+  "sample": "",
+  "latency": 3.51
+ },
+ "XAI:grok-4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.82
+ },
+ "XAI:grok-4-1-fast-non-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.32
+ },
+ "XAI:grok-4-1-fast-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.6
+ },
+ "XAI:grok-4-copy": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.44
+ },
+ "XAI:grok-4-copy2": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.04
+ },
+ "XAI:grok-4-fast-non-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.25
+ },
+ "XAI:grok-4-fast-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.27
+ },
+ "XAI:grok-4.20-beta-non-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 2.97
+ },
+ "XAI:grok-4.20-beta-reasoning": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 4.1
+ },
+ "XAI:grok-4.5": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.66
+ },
+ "XAI:grok-4.6": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.36
+ },
+ "XAI:grok-4.7": {
+  "kind": "VIP",
+  "sample": "Please upgrade to VIP to continue.",
+  "latency": 1.61
+ },
+ "XAI:v4": {
+  "kind": "FREE",
+  "sample": "OK",
+  "latency": 3.82
+ }
+}

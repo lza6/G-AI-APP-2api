@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G.AI 2API · 本地演示</title>
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#121826; --panel2:#0f1521; --line:#1e2739;
+    --fg:#e6edf7; --dim:#8290a8; --accent:#4f8cff; --ok:#3ddc97; --warn:#ffb020; --err:#ff5c7c;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 15% -10%,#16233b 0%,var(--bg) 55%);
+       color:var(--fg);font:14px/1.6 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       height:100vh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);
+         background:rgba(12,17,26,.85);backdrop-filter:blur(8px)}
+  header h1{font-size:15px;margin:0;font-weight:600;letter-spacing:.3px}
+  header .tag{font:11px/1 var(--mono);color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
+  header .spacer{flex:1}
+  .status{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--dim)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--warn)}
+  .dot.on{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+  main{flex:1;display:grid;grid-template-columns:1fr 380px;min-height:0}
+  @media (max-width:900px){main{grid-template-columns:1fr}.side{display:none}}
+  .chat{display:flex;flex-direction:column;min-height:0}
+  .msgs{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+  .msg{max-width:min(820px,88%);padding:11px 14px;border-radius:12px;white-space:pre-wrap;word-break:break-word}
+  .msg.user{align-self:flex-end;background:linear-gradient(180deg,#22406e,#1b3054);border:1px solid #2b4d86}
+  .msg.bot{align-self:flex-start;background:var(--panel);border:1px solid var(--line)}
+  .msg .meta{font:11px/1.4 var(--mono);color:var(--dim);margin-top:7px}
+  .composer{display:flex;gap:10px;padding:12px 16px;border-top:1px solid var(--line);background:rgba(12,17,26,.9)}
+  textarea{flex:1;resize:none;min-height:46px;max-height:160px;background:var(--panel2);color:var(--fg);
+           border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;outline:none}
+  textarea:focus{border-color:#2f4f85}
+  button{background:linear-gradient(180deg,#3f7bf0,#2f62cd);color:#fff;border:0;border-radius:10px;
+         padding:0 18px;font-weight:600;cursor:pointer}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .side{border-left:1px solid var(--line);background:var(--panel2);overflow-y:auto}
+  .blk{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .blk h3{margin:0 0 10px;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--dim);font-weight:600}
+  label{display:block;font-size:12px;color:var(--dim);margin:9px 0 5px}
+  select,input[type=text]{width:100%;background:#0c1220;color:var(--fg);border:1px solid var(--line);
+          border-radius:8px;padding:8px 10px;font:inherit;outline:none}
+  .row{display:flex;gap:8px;align-items:center}
+  .switch{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--dim);margin-top:10px}
+  pre{background:#080c14;border:1px solid var(--line);border-radius:8px;padding:10px;overflow:auto;
+      max-height:260px;font:11px/1.5 var(--mono);color:#9fb3ce;margin:0}
+  .kv{display:flex;justify-content:space-between;font:12px/1.8 var(--mono);color:var(--dim)}
+  .kv b{color:var(--fg);font-weight:600}
+  .pill{display:inline-block;font:11px/1 var(--mono);padding:4px 7px;border-radius:6px;border:1px solid var(--line);color:var(--dim);margin:0 6px 6px 0}
+  .pill.free{color:var(--ok);border-color:#1f5e46}
+  .hint{font-size:11px;color:#5f6d84;margin-top:8px}
+  .err{color:var(--err)}
+</style>
+</head>
+<body>
+<header>
+  <h1>G.AI 2API</h1>
+  <span class="tag" id="pkg">com.aichatmaster.chat</span>
+  <span class="tag" id="up">api.chatgai.fun</span>
+  <span class="spacer"></span>
+  <div class="status"><span class="dot" id="dot"></span><span id="stat">连接中…</span></div>
+</header>
+
+<main>
+  <section class="chat">
+    <div class="msgs" id="msgs"></div>
+    <div class="composer">
+      <textarea id="input" placeholder="输入消息，Enter 发送，Shift+Enter 换行"></textarea>
+      <button id="send">发送</button>
+    </div>
+  </section>
+
+  <aside class="side">
+    <div class="blk">
+      <h3>模型</h3>
+      <select id="model"></select>
+      <div class="hint" id="modelHint">模型目录来自上游 /model/modelConfig</div>
+      <div class="switch"><input type="checkbox" id="search"><span>开启联网搜索 needSearch</span></div>
+      <div class="switch"><input type="checkbox" id="newconv" checked><span>每轮新会话（否则复用 conversationId）</span></div>
+    </div>
+
+    <div class="blk">
+      <h3>本次调用</h3>
+      <div class="kv"><span>会话 ID</span><b id="cid">-</b></div>
+      <div class="kv"><span>首字延迟</span><b id="ttfb">-</b></div>
+      <div class="kv"><span>总耗时</span><b id="total">-</b></div>
+      <div class="kv"><span>原始事件</span><b id="evn">0</b></div>
+    </div>
+
+    <div class="blk">
+      <h3>原始 SSE</h3>
+      <pre id="raw">—</pre>
+    </div>
+
+    <div class="blk">
+      <h3>接口</h3>
+      <div class="pill free">POST /v1/chat/completions</div>
+      <div class="pill">GET /v1/models</div>
+      <div class="pill">POST /api/chat</div>
+      <div class="pill">GET /health</div>
+      <div class="hint">OpenAI 兼容，可直接给 Cherry Studio / LobeChat 之类客户端使用。</div>
+    </div>
+  </aside>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const msgs = $('#msgs'), raw = $('#raw');
+let cid = null, busy = false, evCount = 0;
+
+async function boot(){
+  try{
+    const h = await (await fetch('/health')).json();
+    $('#dot').classList.add('on');
+    $('#stat').textContent = '网关就绪 · max_conn ' + h.max_conn;
+    $('#up').textContent = h.upstream.replace(/^https?:\/\//,'');
+  }catch(e){ $('#stat').textContent = '网关不可达'; }
+
+  try{
+    const r = await (await fetch('/api/models')).json();
+    const sel = $('#model');
+    sel.innerHTML = '';
+    (r.data||[]).forEach(m=>{
+      const o = document.createElement('option');
+      o.value = m.id;
+      o.textContent = `${m.name}  ·  ${m.id}`;
+      sel.appendChild(o);
+    });
+    $('#modelHint').textContent = `已载入 ${(r.data||[]).length} 个模型（含仅 VIP 的）`;
+  }catch(e){
+    $('#modelHint').textContent = '模型目录拉取失败，使用内置默认';
+    const o=document.createElement('option'); o.value='GPT:4.1-mini'; o.textContent='GPT-4.1 Mini'; $('#model').appendChild(o);
+  }
+}
+
+function addMsg(role, text){
+  const d = document.createElement('div');
+  d.className = 'msg ' + role;
+  d.textContent = text;
+  msgs.appendChild(d);
+  msgs.scrollTop = msgs.scrollHeight;
+  return d;
+}
+
+async function send(){
+  const q = $('#input').value.trim();
+  if(!q || busy) return;
+  busy = true; $('#send').disabled = true; $('#input').value='';
+  addMsg('user', q);
+  const bot = addMsg('bot', '');
+  const t0 = performance.now();
+  let ttfb = null, out = '';
+  evCount = 0; raw.textContent = '';
+  const useNew = $('#newconv').checked || !cid;
+  if(useNew) cid = crypto.randomUUID();
+  $('#cid').textContent = cid.slice(0,8)+'…';
+
+  try{
+    const resp = await fetch('/api/chat', {
+      method:'POST', headers:{'content-type':'application/json'},
+      body: JSON.stringify({ question:q, model:$('#model').value, conversationId:cid,
+                             needSearch:$('#search').checked })
+    });
+    const reader = resp.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '';
+    while(true){
+      const {value, done} = await reader.read();
+      if(done) break;
+      buf += dec.decode(value, {stream:true});
+      let i;
+      while((i = buf.indexOf('\n\n')) >= 0){
+        const chunk = buf.slice(0,i); buf = buf.slice(i+2);
+        if(!chunk.startsWith('data:')) continue;
+        const payload = chunk.slice(5).trim();
+        if(payload === '[DONE]') continue;
+        let ev; try{ ev = JSON.parse(payload) }catch(e){ continue }
+        evCount++;
+        raw.textContent = (raw.textContent + payload + '\n').slice(-4000);
+        raw.scrollTop = raw.scrollHeight;
+        const a = ev.data && ev.data.answer;
+        if(a){
+          if(ttfb === null){ ttfb = performance.now() - t0; $('#ttfb').textContent = ttfb.toFixed(0)+' ms'; }
+          out += a; bot.textContent = out; msgs.scrollTop = msgs.scrollHeight;
+        } else if(ev.message && ev.code !== 0 && ev.code !== 200){
+          bot.innerHTML = '<span class="err">'+ (ev.message||'') +'</span>';
+        }
+      }
+    }
+    if(!out && !bot.textContent) bot.textContent = '(空响应)';
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.textContent = `model=${$('#model').value} · events=${evCount} · ${(performance.now()-t0).toFixed(0)}ms`;
+    bot.appendChild(meta);
+  }catch(e){
+    bot.innerHTML = '<span class="err">请求失败: '+e.message+'</span>';
+  }finally{
+    $('#total').textContent = (performance.now()-t0).toFixed(0)+' ms';
+    $('#evn').textContent = evCount;
+    busy = false; $('#send').disabled = false; $('#input').focus();
+  }
+}
+
+$('#send').onclick = send;
+$('#input').addEventListener('keydown', e=>{
+  if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); send(); }
+});
+boot();
+</script>
+</body>
+</html>

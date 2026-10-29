@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+*.apk
+blutter_out/
+apk/
+libapp_strings.txt
+.env
+proxies.txt
+demo_proof.png
