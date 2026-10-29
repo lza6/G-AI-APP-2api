@@ -115,27 +115,29 @@ curl http://127.0.0.1:8970/v1/chat/completions \
 ## 文件清单
 
 ```
-gai_proto.py          协议客户端（签名/AES/SSE 解析），可独立当库用
-server.py             本地网关（FastAPI，OpenAI 兼容 + demo 接口）
+gai_proto.py          协议客户端（签名/AES/SSE 解析，支持端点级 without 排除），可独立当库用
+server.py             本地网关（FastAPI，OpenAI 兼容 + demo 接口 + IP 池轮换）
 demo.html             演示页（原生 JS，流式渲染 + 原始 SSE 面板 + 耗时）
-stress_test.py        并发阶梯压测
-probe_r1.py           createNewUser / 通道探测
-probe_r2.py           模型表 / 配置探测
-probe_fields.py       逐字段签名二分
-probe_common.py       /common/sse/chat 打通脚本
-probe_sse.py          SSE 端点探针
-probe_quota.py        免费额度定位
-probe_matrix.py       端点矩阵普查
-probe_sign.py         签名方案穷举（历史留档）
-scan_models.py        247 个 aiVersion 可用性扫描
+stress_test.py        并发阶梯压测（连接池 6 / 20 对照）
+stress_real.py        真实生成并行实测（TTFT / 墙钟）
 e2e_demo.py           Playwright 真实浏览器验证
-models_full.json      模型表 + 能力表原始返回
-model_matrix.json     247 项可用性分类
-demo_proof.png        演示页截图（真实运行）
+probe_quota_ip.py     额度维度定案（多出口对照）
+probe_file.py         文件上传链路（自造 PNG，无需 Pillow）
+probe_image.py        文生图同步/异步通道判定
+scan_models2.py       模型可用性扫描（区分 VIP 门槛与额度耗尽）
+gen_model_doc.py      由扫描结果生成 MODELS.md
+MODELS.md             145 个 chat 模型的实测可用性清单
+build_public.py       脱敏打成发布树
+models_full.json      模型表 + 247 项能力表原始返回
+model_matrix2.json    可用性分类原始数据
+demo_proof.png        演示页截图（真实出字）
 docs/PROTOCOL.md      协议还原报告（核心）
 docs/REVERSE_REPORT.md 逆向过程与证据
 docs/NEWAPI_INTEGRATION.md  new-api 渠道对接交接书
 ```
+
+> 早期探针（`probe_r1/r2/sse/fields/sign/matrix/quota`、`scan_models.py`）仍在目录中，
+> 属过程留档，对应文中「R1 走过的弯路」，发布版未收录。
 
 ## 风险与限制
 
